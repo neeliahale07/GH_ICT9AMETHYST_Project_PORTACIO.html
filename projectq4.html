@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length Conversion Calculator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			background-color: #f1f1f1;
+		}
+
+		h1 {
+			color: #333333;
+		}
+
+		label {
+			font-size: 18px;
+			color: #333333;
+		}
+
+		input[type="text"] {
+			padding: 5px;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+		}
+
+		button {
+			padding: 10px 20px;
+			font-size: 18px;
+			background-color: #4CAF50;
+			color: #ffffff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		p {
+			font-size: 16px;
+			color: #333333;
+		}
+
+		#centimeter,
+		#meter,
+		#kilometer {
+			font-weight: bold;
+			color: #4CAF50;
+		}
+	</style>
+</head>
+<body>
+	<h1>LENGHT CONVERTER</h1>
+	<label for="input">Please input the length in millimeters: </label>
+	<input type="text" id="input"><br><br>
+	<button onclick="convert()">Convert</button><br><br>
+	<p>Centimeters: <span id="centimeter"></span></p>
+	<p>Meter: <span id="meter"></span></p>
+	<p>Kilometers: <span id="kilometer"></span></p>
+	<script>
+		function convert() {
+			var input = document.getElementById("input").value;
+
+			var centimeter = input / 10;
+			document.getElementById("centimeter").innerHTML = centimeter;
+
+			var meter = input / 1000;
+			document.getElementById("meter").innerHTML = meter;
+
+			var kilometer = input / 1000000;
+			document.getElementById("kilometer").innerHTML = kilometer;
+		}
+	</script>
+</body>
+</html>
